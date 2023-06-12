@@ -56,7 +56,7 @@
                              &trans     &trans      &trans   &trans       &trans    &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp BT_PRV BT_NXT>;
+            sensor-bindings = <&bt BT_PRV BT_NXT>;
         };
 
         raise_layer {
