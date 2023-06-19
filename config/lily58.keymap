@@ -72,7 +72,7 @@
 // |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-&trans    &trans  &trans &trans    &kp END &trans                   &kp HOME   &trans    &trans   &trans    &trans    &trans
+&trans    &trans  &trans &trans    &kp END &trans                   &kp HOME   &trans    &trans   &trans    &kp MINUS &kp EQUAL
 &trans    &trans  &trans &trans    &trans  &trans                   &trans     &kp PG_UP &trans   &trans    &kp LBKT  &kp RBKT
 &trans    &trans  &trans &kp PG_DN &trans  &trans                   &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT &trans    &kp GRAVE
 &trans    &trans  &trans &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans   &trans    &trans    &trans
