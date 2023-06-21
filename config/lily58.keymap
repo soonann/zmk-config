@@ -44,7 +44,8 @@
                          &kp LGUI &mo 2     &kp LCMD &kp SPACE  &kp RET  &kp BSPC &mo 1    &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+
         };
 
         lower_layer {
