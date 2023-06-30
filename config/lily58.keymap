@@ -26,6 +26,18 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        windows_layer_overwrite {
+            if-layers = <3 1>;
+            then-layer = <1>;
+        };
+        tri_layer {
+            if-layers = <3 2>;
+            then-layer = <2>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
