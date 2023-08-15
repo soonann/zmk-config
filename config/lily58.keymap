@@ -18,6 +18,12 @@
             bindings = <&kp ESC>, <&kp TILDE>;
             mods = <(MOD_LSFT)>;
         };
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp DOWN>, <&kp UP>;
+        };
         bt_encoder: bt_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             label = "BT_ENCODER";
@@ -67,7 +73,7 @@
 &trans      &trans        &trans        &trans       &trans       &trans                         &trans    &trans   &trans   &trans    &trans    &trans
                                         &trans       &trans       &trans       &trans   &trans   &trans    &trans   &trans
             >;
-            sensor-bindings = <&bt_encoder>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
@@ -101,7 +107,7 @@
 &trans      &trans        &trans        &trans       &trans       &trans       &trans   &trans   &trans    &trans   &trans   &trans    &trans    &trans
                                         &trans       &trans       &trans       &trans   &trans   &trans    &trans   &trans
             >;
-            sensor-bindings = <&bt_encoder>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
     };
