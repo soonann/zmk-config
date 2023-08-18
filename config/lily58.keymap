@@ -44,16 +44,16 @@
         compatible = "zmk,keymap";
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |ESC/TILDE |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-// |  TAB     |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |       |
-// |  SHIFT   |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |       |
-// |  CTRL    |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   |       |
+// |ESC/TILDE |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |     |
+// |  TAB     |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |     |
+// |  SHIFT   |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |     |
+// |  CTRL    |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   |     |
 //                        | GUI  | ALT  | SPACE|  RAISE |  | LOWER | ENTER| BSPC  | GUI   |
             bindings = <
 &esc_tilde &kp N1 &kp N2 &kp N3   &kp N4    &kp N5                       &kp N6   &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp TAB    &kp Q  &kp W  &kp E    &kp R     &kp T                        &kp Y    &kp U    &kp I     &kp O   &kp P    &kp BSLH
-&kp LCTRL  &kp A  &kp S  &kp D    &kp F     &kp G                        &kp H    &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp V     &kp B    &kp LBKT   &kp RBKT &kp N    &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
+&kp TAB    &kp Q  &kp W  &kp E    &kp R     &kp T                        &kp Y    &kp U    &kp I     &kp O   &kp P    &kp EQUAL
+&kp LSHFT  &kp A  &kp S  &kp D    &kp F     &kp G                        &kp H    &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C    &kp V     &kp B    &kp LBKT   &kp RBKT &kp N    &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
                          &kp LGUI &mo 2     &kp LALT &kp SPACE  &kp RET  &kp BSPC &mo 1    &kp RGUI
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -84,10 +84,10 @@
 // |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-&trans    &trans  &trans  &trans    &kp END &trans                   &kp HOME   &trans    &trans   &trans    &kp MINUS &kp EQUAL
-&trans    &trans  &trans  &trans    &trans  &trans                   &trans     &kp PG_UP &kp LPAR &kp RPAR  &kp LBKT  &kp RBKT
-&trans    &trans  &trans  &kp PG_DN &trans  &trans                   &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT &trans    &kp GRAVE
-&trans    &trans  &kp DEL &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans   &trans    &trans    &trans
+&trans    &trans  &trans  &trans    &kp END &trans                   &kp HOME   &trans    &trans    &trans    &trans   &trans 
+&trans    &trans  &trans  &trans    &trans  &trans                   &trans     &kp PG_UP &kp LBKT  &kp RBKT  &trans   &kp BSLH
+&trans    &trans  &trans  &kp PG_DN &trans  &trans                   &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &trans   &kp GRAVE
+&trans    &trans  &kp DEL &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans    &trans    &trans   &trans
                           &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans   
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
