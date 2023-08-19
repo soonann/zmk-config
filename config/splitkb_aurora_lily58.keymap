@@ -58,7 +58,7 @@
 &kp LCTRL  &kp Z  &kp X  &kp C    &kp V     &kp B    &to 2      &to 1    &kp N      &kp M   &kp COMMA &kp DOT &kp FSLH &mt RSHIFT EQUAL
                          &kp LGUI &mo 2     &kp LALT &kp SPACE  &kp RET  &bspc_del  &mo 1   &kp RCTRL
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -92,7 +92,7 @@
 &trans    &trans  &trans  &trans    &trans  &trans  &to 2    &to 1   &trans     &trans    &trans    &trans    &kp BSLH  &trans
                           &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans   
             >;
-            sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
+            sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC>;
         };
 
         settings_layer {
@@ -109,7 +109,7 @@
 &trans      &trans        &trans        &trans       &trans       &trans       &to 2    &to 1    &trans    &trans   &trans   &trans    &trans    &trans
                                         &trans       &trans       &trans       &trans   &trans   &trans    &trans   &trans
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
     };
