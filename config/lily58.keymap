@@ -18,6 +18,13 @@
             bindings = <&kp ESC>, <&kp TILDE>;
             mods = <(MOD_LSFT)>;
         };
+        bspc_del: bspc_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSPC_DEL";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LALT)>;
+        };
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             label = "SCROLL_ENCODER";
@@ -30,6 +37,11 @@
             #sensor-binding-cells = <0>;
             bindings = <&bt BT_PRV>, <&bt BT_NXT>;
         };
+
+    };
+
+    &mt {
+        tapping-term-ms = <400>;
     };
 
     conditional_layers {
@@ -50,11 +62,11 @@
 // |  CTRL    |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   |     |
 //                        | GUI  | ALT  | SPACE|  RAISE |  | LOWER | ENTER| BSPC  | GUI   |
             bindings = <
-&esc_tilde &kp N1 &kp N2 &kp N3   &kp N4    &kp N5                       &kp N6   &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp TAB    &kp Q  &kp W  &kp E    &kp R     &kp T                        &kp Y    &kp U    &kp I     &kp O   &kp P    &kp EQUAL
-&kp LSHFT  &kp A  &kp S  &kp D    &kp F     &kp G                        &kp H    &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C    &kp V     &kp B    &kp LBKT   &kp RBKT &kp N    &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
-                         &kp LGUI &mo 2     &kp LALT &kp SPACE  &kp RET  &kp BSPC &mo 1    &kp RGUI
+&esc_tilde &kp N1 &kp N2 &kp N3   &kp N4    &kp N5                       &kp N6     &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
+&kp TAB    &kp Q  &kp W  &kp E    &kp R     &kp T                        &kp Y      &kp U   &kp I     &kp O   &kp P    &kp EQUAL
+&kp LSHFT  &kp A  &kp S  &kp D    &kp F     &kp G                        &kp H      &kp J   &kp K     &kp L   &kp SEMI &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C    &kp V     &kp B    &kp LBKT   &kp RBKT &kp N      &kp M   &kp COMMA &kp DOT &kp FSLH &mt RSHIFT EQUAL
+                         &kp LGUI &mo 2     &kp LALT &kp SPACE  &kp RET  &bspc_del  &mo 1   &kp RGUI
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
@@ -84,10 +96,10 @@
 // |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-&trans    &trans  &trans  &trans    &kp END &trans                   &kp HOME   &trans    &trans    &trans    &trans   &trans 
-&trans    &trans  &trans  &trans    &trans  &trans                   &trans     &kp PG_UP &trans    &trans    &kp LBKT &kp RBKT 
-&trans    &trans  &trans  &kp PG_DN &trans  &trans                   &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &trans   &kp GRAVE
-&trans    &trans  &kp DEL &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans    &trans    &trans   &kp BSLH
+&kp GRAVE &trans  &trans  &trans    &kp END &trans                   &kp HOME   &trans    &trans    &trans    &trans    &trans 
+&trans    &trans  &trans  &trans    &trans  &trans                   &trans     &kp PG_UP &trans    &trans    &kp LBKT  &kp RBKT 
+&trans    &trans  &trans  &kp PG_DN &trans  &trans                   &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &trans    &kp GRAVE
+&trans    &trans  &kp DEL &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans    &trans    &kp BSLH  &trans
                           &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans   
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
