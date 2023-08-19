@@ -85,9 +85,9 @@
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
 &trans    &trans  &trans  &trans    &kp END &trans                   &kp HOME   &trans    &trans    &trans    &trans   &trans 
-&trans    &trans  &trans  &trans    &trans  &trans                   &trans     &kp PG_UP &kp LBKT  &kp RBKT  &trans   &kp BSLH
+&trans    &trans  &trans  &trans    &trans  &trans                   &trans     &kp PG_UP &trans    &trans    &kp LBKT &kp RBKT 
 &trans    &trans  &trans  &kp PG_DN &trans  &trans                   &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &trans   &kp GRAVE
-&trans    &trans  &kp DEL &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans    &trans    &trans   &trans
+&trans    &trans  &kp DEL &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans    &trans    &trans   &kp BSLH
                           &trans    &trans  &trans  &trans   &trans  &trans     &trans    &trans   
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
