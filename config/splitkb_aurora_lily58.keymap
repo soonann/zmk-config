@@ -36,6 +36,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&bt BT_PRV>, <&bt BT_NXT>;
         };
+        /*
         gqt: global-quick-tap {
            compatible = "zmk,behavior-hold-tap";
            label = "GLOBAL_QUICK_TAP";
@@ -46,6 +47,18 @@
            global-quick-tap;
            bindings = <&kp>, <&kp>;
         };
+        */
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49>;
+        };
+
     };
 
 
@@ -70,7 +83,7 @@
 &esc_tilde &kp N1 &kp N2 &kp N3   &kp N4    &kp N5                       &kp N6     &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
 &kp TAB    &kp Q  &kp W  &kp E    &kp R     &kp T                        &kp Y      &kp U   &kp I     &kp O   &kp P    &kp BSLH
 &kp LSHFT  &kp A  &kp S  &kp D    &kp F     &kp G                        &kp H      &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C    &kp V     &kp B    &tog RSE   &tog LOW &kp N      &kp M   &kp COMMA &kp DOT &kp FSLH &gqt RSHIFT EQUAL
+&kp LCTRL  &kp Z  &kp X  &kp C    &kp V     &kp B    &tog RSE   &tog LOW &kp N      &kp M   &kp COMMA &kp DOT &kp FSLH &pht RSHIFT EQUAL
                          &kp LGUI &mo RSE   &kp LALT &kp SPACE  &kp RET  &bspc_del  &mo LOW &kp RCTRL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
