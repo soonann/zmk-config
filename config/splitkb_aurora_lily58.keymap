@@ -30,14 +30,7 @@
             bindings = <&kp BSPC>, <&kp DEL>;
             mods = <(MOD_LALT)>;
         };
-        bt_encoder: bt_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "BT_ENCODER";
-            #sensor-binding-cells = <0>;
-            bindings = <&bt BT_PRV>, <&bt BT_NXT>;
-        };
     };
-
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -80,7 +73,7 @@
 &trans   &trans    &trans    &trans  &trans   &trans  &tog RSE &trans   &trans    &trans   &trans   &trans    &trans    &trans
                              &trans  &trans   &trans  &trans   &trans   &trans    &trans   &trans
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DOWN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
