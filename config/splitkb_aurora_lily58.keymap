@@ -44,7 +44,7 @@
            tapping-term-ms = <200>;
            quick-tap-ms = <125>;
            global-quick-tap;
-           bindings = <&kp RSHIFT>, <&kp EQUAL>;
+           bindings = <&kp RSHIFT EQUAL>;
         };
     };
 
