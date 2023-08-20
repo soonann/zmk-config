@@ -79,7 +79,7 @@
 &trans   &trans    &trans    &trans  &trans   &trans  &tog RSE &tog LOW &trans    &trans   &trans   &trans    &trans    &trans
                              &trans  &trans   &trans  &trans   &trans   &trans    &trans   &trans
             >;
-            sensor-bindings = <&inc_dec_kp DOWN UP>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         raise_layer {
