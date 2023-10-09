@@ -21,7 +21,7 @@
             label = "ESC_TILDE";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp TILDE>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 //        bspc_del: bspc_del {
 //            compatible = "zmk,behavior-mod-morph";
