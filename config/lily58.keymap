@@ -54,7 +54,7 @@
 &trans  &trans  &trans  &trans    &kp END &trans                  &kp HOME   &trans    &trans     &trans    &trans    &trans
 &trans  &trans  &trans  &trans    &trans  &trans                  &trans     &kp PG_UP &kp EQUAL  &kp LBKT  &kp RBKT  &trans
 &trans  &trans  &trans  &kp PG_DN &trans  &trans                  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT &trans    &kp GRAVE
-&trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans     &trans    &kp BSLH  &trans
+&trans  &trans  &kp DEL &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans     &trans    &kp BSLH  &trans
                         &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans     
             >;
         };
