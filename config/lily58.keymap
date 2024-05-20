@@ -35,18 +35,6 @@
             if-layers = <1 2>;
             then-layer = <3>;
         };
-        rse_mac_layer {
-            if-layers = <1 4>;
-            then-layer = <1>;
-        };
-        low_mac_layer {
-            if-layers = <2 4>;
-            then-layer = <2>;
-        };
-        set_mac_layer {
-            if-layers = <1 2 4>;
-            then-layer = <3>;
-        };
     };
 
     keymap {
