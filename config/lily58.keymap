@@ -7,7 +7,7 @@
 #define DEF 0
 #define RSE 1
 #define LOW 2
-#define BOTH 3
+#define SET 3
 #define MAC 4
 
 / { 
@@ -31,8 +31,20 @@
     // if layer 1 and 2 are triggered, switch to layer 3
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        settings_layer {
+        set_layer {
             if-layers = <1 2>;
+            then-layer = <3>;
+        };
+        rse_mac_layer {
+            if-layers = <1 4>;
+            then-layer = <1>;
+        };
+        low_mac_layer {
+            if-layers = <2 4>;
+            then-layer = <2>;
+        };
+        set_layer {
+            if-layers = <1 2 4>;
             then-layer = <3>;
         };
     };
